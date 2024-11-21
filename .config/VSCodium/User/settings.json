@@ -1,5 +1,7 @@
 {
-    "window.titleBarStyle": "custom",
+    "window.titleBarStyle": "native",
+    "window.menuBarVisibility": "hidden",
+    "window.customTitleBarVisibility": "never",
     "workbench.editor.showTabs": "none",
     "editor.scrollbar.horizontalScrollbarSize": 0,
     "editor.scrollbar.verticalScrollbarSize": 0,
@@ -18,7 +20,9 @@
     "editor.minimap.side": "left",
     "editor.minimap.scale": 2,
     "editor.inlayHints.enabled": "off",
-    "workbench.activityBar.location": "top",
-    "window.customTitleBarVisibility": "auto",
-    "editor.wordWrap": "on"
+    "workbench.activityBar.location": "hidden",
+    "editor.wordWrap": "on",
+    "workbench.iconTheme": null,
+    "workbench.statusBar.visible": false,
+    "breadcrumbs.enabled": false
 }
