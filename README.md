@@ -9,4 +9,5 @@
 ---
 
 ### Credits
-Current wallpaper by [WLOP](https://twitter.com/wlopwangling) .3
+Current wallpaper by [Freaks](https://www.flickr.com/people/164696274@N08/)
+I also use wallpapers by [WLOP](https://twitter.com/wlopwangling) .3
