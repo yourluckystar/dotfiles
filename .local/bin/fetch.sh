@@ -31,6 +31,7 @@ ker=$(uname -r)
 up=$(uptime -p)
 sh=$SHELL
 pkg=$(pacman -Q | wc -l)
+draw=$(~/.local/bin/krita_tracker.sh)
 col=$(echo -e "$(for row in {0..1}; do for col in {0..7}; do color=$((row * 8 + col)); echo -ne "\033[48;5;${color}m    \033[0m"; done; echo; done)")
 art=$(print_ascii)
 
@@ -45,7 +46,7 @@ info_lines=(
     "up: $up"
     "sh: $sh"
     "pkg: $pkg (Pacman)"
-    ""
+    "draw: $draw"
     ""
     ""
     $col
