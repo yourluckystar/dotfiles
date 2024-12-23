@@ -1,0 +1,6 @@
+[user]
+	name = Your
+	email = 184955262+yourluckystar@users.noreply.github.com
+	signingkey = /home/ame/.ssh/sign.pub
+[gpg]
+	format = ssh
