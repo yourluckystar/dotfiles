@@ -1,0 +1,31 @@
+* {
+    color: rgba(197, 190, 206, 0.67);
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Less Perfect DOS VGA";
+}
+
+window#waybar {
+    border-top: 1px solid rgba(197, 190, 206, 0.335);
+    background: rgba(17, 14, 23, 0.335);
+}
+
+#custom-vpn {
+    padding-right: 20px;
+}
+
+#clock {
+    padding-right: 20px;
+}
+
+#user {
+    padding-right: 20px;
+}
+
+#pulseaudio {
+    padding-right: 20px;
+}
+
+#window {
+    padding-left: 20px;
+}

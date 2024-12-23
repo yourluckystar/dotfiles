@@ -1,0 +1,48 @@
+{
+    "layer": "top",
+    "height": 40,
+    "width": 2560,
+    "position": "bottom",
+    "spacing": 0,
+    "exclusive": false,
+    "fixed-center": true,
+
+    "modules-left": [
+        "hyprland/window"
+    ],
+
+    "modules-right": [
+        "pulseaudio",
+        "custom/vpn",
+        "user",
+        "clock"
+    ],
+
+    "hyprland/window": {
+        "format": "{initialTitle}"
+    },
+
+    "pulseaudio": {
+        "format": "{volume}%",
+        "scroll-step": 2,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+
+    "custom/vpn": {
+        "interval": 3,
+        "format": "{}",
+        "exec": "ip add show | grep -qF jp-osa-wg-002 && echo Secure Connection || echo No VPN",
+        "tooltip": false
+    },
+
+    "user": {
+        "format": "{user}"
+    },
+
+    "clock": {
+        "interval": 10,
+        "format": "{:%H:%M:%S%n%Y%m%d}",
+        "tooltip": false
+    }
+}
