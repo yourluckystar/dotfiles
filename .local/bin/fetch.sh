@@ -2,25 +2,25 @@
 
 print_ascii() {
     cat << "EOF"
-                   -`                 
-                  .o+`                
-                 `ooo/                
-                `+oooo:               
-               `+oooooo:              
-               -+oooooo+:             
-             `/:-:++oooo+:            
-            `/++++/+++++++:           
-           `/++++++++++++++:          
-          `/+++ooooooooooooo/`        
-         ./ooosssso++osssssso+`       
-        .oossssso-````/ossssss+`      
-       -osssssso.      :ssssssso.     
-      :osssssss/        osssso+++.    
-     /ossssssss/        +ssssooo/-    
-   `/ossssso+/:-        -:/+osssso+-  
-  `+sso+:-`                 `.-/+oso: 
- `++:.                           `-/+/
- .`                                 ` 
+                  -`                 
+                 .o+`                
+                `ooo/                
+               `+oooo:               
+              `+oooooo:              
+              -+oooooo+:             
+            `/:-:++oooo+:            
+           `/++++/+++++++:           
+          `/++++++++++++++:          
+         `/+++ooooooooooooo/`        
+        ./ooosssso++osssssso+`       
+       .oossssso-````/ossssss+`      
+      -osssssso.      :ssssssso.     
+     :osssssss/        osssso+++.    
+    /ossssssss/        +ssssooo/-    
+  `/ossssso+/:-        -:/+osssso+-  
+ `+sso+:-`                 `.-/+oso: 
+`++:.                           `-/+/
+.`                                 ` 
 EOF
 }
 
@@ -40,7 +40,7 @@ IFS=$'\n'
 mapfile -t art_lines <<< "$art"
 info_lines=(
     "$usr@$host"
-    "~~~~~~"
+    ""
     "os: $os"
     "ker: $ker"
     "up: $up"

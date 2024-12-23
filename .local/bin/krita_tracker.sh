@@ -30,4 +30,4 @@ hours=$((drawing_time / 3600))
 minutes=$(((drawing_time % 3600) / 60))
 seconds=$((drawing_time % 60))
 
-echo "$hours:$minutes:$seconds (krita)"
+echo "$hours hours, $minutes minutes"
