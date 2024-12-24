@@ -1,7 +1,6 @@
 {
     "layer": "top",
     "height": 40,
-    "width": 2560,
     "position": "bottom",
     "spacing": 0,
     "exclusive": false,
