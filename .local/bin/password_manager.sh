@@ -31,12 +31,12 @@ decrypt() {
 add_password() {
     read -p "Service: " service
     read -p "Email: " email
-    read -s -p "Password: " password
-    echo
-    read -s -p "2FA secret (Optional): " secret
+    read -p "Password: " password
+    read -p "2FA secret (Optional): " secret
     echo
 
-    info="$service $email $password $secret"
+    info="$service"$'\n'"$email"$'\n'"$password"$'\n'"$secret"
+    
     encrypt "$info"
 
     echo "Saved successfully .3"
@@ -48,32 +48,47 @@ generate_codes() {
     echo "$current_code" "$next_code"
 }
 
-show_passwords() {
+show() {
     decrypted_output=$(decrypt)
 
     if [ $? -eq 0 ]; then
-        echo "$decrypted_output" | while IFS=' ' read -r service email password secret; do
-            echo "Service: $service"
-            echo "Email: $email"
-            echo "Password: $password"
-            if [ -n "$secret" ]; then
-                while true; do
-                    seconds=$(date +%S)
-                    interval=$((30 - seconds % 30))
-
-                    read current_code next_code <<< "$(generate_codes)"
-                    for ((i=interval; i>0; i--)); do
-                        printf "\033[1G\033[K2FA code: %s (%d) \e[2m%s (next)\e[0m " "$current_code" "$i" "$next_code"
-                        sleep 1
-                    done
-                done
-            else
-                echo "2FA code: Not set"
-            fi
-        done
+        while IFS= read -r service && IFS= read -r email && IFS= read -r password && IFS= read -r secret; do
+            display_password_info "$service" "$email" "$password" "$secret"
+        done <<< "$decrypted_output"
     else
         echo "Decryption failed."
     fi
+}
+
+display_password_info() {
+    local service="$1"
+    local email="$2"
+    local password="$3"
+    local secret="$4"
+
+    echo "Service: $service"
+    echo "Email: $email"
+    echo "Password: $password"
+
+    if [ -n "$secret" ]; then
+        display_2fa "$secret"
+    else
+        echo "2FA code: Not set"
+    fi
+}
+
+display_2fa() {
+    local secret="$1"
+    while true; do
+        seconds=$(date +%S)
+        interval=$((30 - seconds % 30))
+
+        read current_code next_code <<< "$(generate_codes)"
+        for ((i=interval; i>0; i--)); do
+            printf "\033[1G\033[K2FA code: %s (%d) \e[2m%s (next)\e[0m " "$current_code" "$i" "$next_code"
+            sleep 1
+        done
+    done
 }
 
 if [ -z "$1" ]; then
@@ -90,5 +105,5 @@ if [ -z "$1" ]; then
     esac
 else
     name="$1"
-    show_passwords
+    show
 fi
