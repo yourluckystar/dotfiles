@@ -71,6 +71,7 @@ display_password_info() {
     echo "Password: $password"
 
     if [ -n "$secret" ]; then
+        echo "Secret: $secret"
         display_2fa "$secret"
     else
         echo "2FA code: Not set"
