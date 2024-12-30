@@ -7,13 +7,15 @@
     "fixed-center": true,
 
     "modules-left": [
-        "hyprland/window"
+        "user",
+         "custom/seperator",
+        "hyprland/window",
+         "custom/seperator"
     ],
 
     "modules-right": [
         "pulseaudio",
         "custom/vpn",
-        "user",
         "clock"
     ],
 
@@ -35,13 +37,18 @@
         "tooltip": false
     },
 
+    "custom/seperator": {
+        "format": "{ }",
+        "tooltip": false
+    },
+
     "user": {
         "format": "{user}"
     },
 
     "clock": {
         "interval": 10,
-        "format": "{:%H:%M:%S%n%Y%m%d}",
+        "format": "{:%H:%M DAY %d}",
         "tooltip": false
     }
 }

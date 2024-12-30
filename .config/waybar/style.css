@@ -10,22 +10,18 @@ window#waybar {
     background: rgba(17, 14, 23, 0.335);
 }
 
-#custom-vpn {
-    padding-right: 20px;
+#custom-vpn, #custom-seperator, #clock, #user, #pulseaudio {
+    margin: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
+
+    border-top: 1px solid rgba(197, 190, 206, 0.335);;
+    border-left: 1px solid rgba(197, 190, 206, 0.335);;
+    border-right: 1px solid rgba(197, 190, 206, 0.67);
+    border-bottom: 1px solid rgba(197, 190, 206, 0.67);
 }
 
-#clock {
-    padding-right: 20px;
-}
-
-#user {
-    padding-right: 20px;
-}
-
-#pulseaudio {
-    padding-right: 20px;
-}
-
-#window {
-    padding-left: 20px;
+#custom-seperator {
+    padding-left: 0px;
+    padding-right: 0px;
 }
