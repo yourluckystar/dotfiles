@@ -28,7 +28,7 @@
 
 `using on both`<br>
 [librewolf](https://librewolf.net/)<br>
-[vscodium](https://vscodium.com/)<br>
+[vim](https://www.vim.org/)<br>
 [vlc](https://www.videolan.org/vlc/)<br>
 
 ---
