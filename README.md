@@ -1,9 +1,9 @@
 |dotfiles                                                                                                      |
 |--------------------------------------------------------------------------------------------------------------|
+|![Screenshot_2025-03-16_09-20-23](https://github.com/user-attachments/assets/4343e12e-2aa3-4ed6-b3cc-0471b4068e39)|
+|xfce|
 |![screenshot_20241224_063442](https://github.com/user-attachments/assets/f23966b5-f8e9-423f-bd1d-7452db2da26d)|
 |hyprland|
-|![Screenshot_2025-03-07_00-20-49](https://github.com/user-attachments/assets/046f2808-b48d-465d-99c9-214f31fe45b8)|
-|xfce|
 
 
 
